@@ -141,11 +141,11 @@ def prepare_input(input_data,df):
     return input_df, input_dict
 models = {}
 model_files = {
-    'XGBoost': 'XGB_model.pkl',
-    'Random Forest': 'RF_model.pkl',
-    'Gradient Boosting': 'GBC_model.pkl',
-    'SVC': 'SVC_model.pkl',
-    'Voting Classifier': 'voting_hard_model.pkl'
+    'XGBoost': 'models/XGB_model.pkl',
+    'Random Forest': 'models/RF_model.pkl',
+    'Gradient Boosting': 'models/GBC_model.pkl',
+    'SVC': 'models/SVC_model.pkl',
+    'Voting Classifier': 'models/voting_soft_model.pkl'
 }
     
 for name, file in model_files.items():
