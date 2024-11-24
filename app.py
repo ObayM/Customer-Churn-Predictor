@@ -11,6 +11,36 @@ model = genai.GenerativeModel('gemini-pro')
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="wide")
 
+st.markdown("""
+    <style>
+    .title-container {
+        background: linear-gradient(to right, #1e3c72, #2a5298);
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .main-title {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    .subtitle {
+        color: #e0e0e0;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.markdown("""
+    <div class="title-container">
+        <div class="main-title">Customer Churn Predictor</div>
+        <div class="subtitle">Powered by Advanced Machine Learning</div>
+    </div>
+    """, unsafe_allow_html=True)
+
 def create_gauge_chart(probability):
     if probability < 0.3:
         color = "green"
